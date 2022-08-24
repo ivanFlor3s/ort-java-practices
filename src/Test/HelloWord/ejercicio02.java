@@ -8,6 +8,7 @@ public class ejercicio02 {
 		
 		MyHelper helper = new MyHelper(); 
 		
+		
 		int nota1 = 0, nota2 = 0, nota3 = 0;
 		
 		nota1 = helper.printAndAskForNumber("Ingrese primer nota");

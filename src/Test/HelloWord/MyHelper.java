@@ -4,8 +4,14 @@ import java.util.Scanner;
 
 public class MyHelper {
 	
-	static Scanner input = new Scanner (System.in);
-
+	private long startTime;
+	static Scanner input;
+	
+	MyHelper(){
+		startTime = System.currentTimeMillis();
+		input = new Scanner (System.in);
+	}
+	
 	public void print(String s) {
 		System.out.println(s);
 	}
@@ -33,9 +39,11 @@ public class MyHelper {
 				"800 pesos la docena increible!"
 		};
 		int rand = getRandomNumber(0,pesames.length - 1);
+		print("");
 		String miPesame = pesames[rand];
 		System.out.println("Murio el scanner");
 		System.out.println(miPesame);
+		print("El scanner solo vivio: "+ (System.currentTimeMillis() - startTime ) + " ms");
 		input.close();
 	}
 	

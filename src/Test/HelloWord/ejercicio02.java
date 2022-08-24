@@ -2,7 +2,6 @@ package Test.HelloWord;
 import java.util.Scanner;
 
 public class ejercicio02 {
-	static Scanner input = new Scanner (System.in);
 
 	public static void main(String[] args) {
 		
@@ -15,8 +14,12 @@ public class ejercicio02 {
 		nota2 = helper.printAndAskForNumber("Ingrese segunda nota");
 		nota3 = helper.printAndAskForNumber("Ingrese tercer nota");
 		
+		
+		double promedio = (nota1 + nota2 + nota3)/3;
+		
+		helper.print("El promedio del alumno es: " + promedio);
 		helper.asesinarScanner();
-
+		
 		
 	}
 

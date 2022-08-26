@@ -1,7 +1,5 @@
 package Test.HelloWord;
 
-import java.util.Iterator;
-
 public class ejercicio22 {
 
 	public static void main(String[] args) {

@@ -33,6 +33,8 @@ public class ejercicio19 {
 			helper.print("Es un pobre bastardo");
 		}
 		
+		
+		
 		helper.asesinarScanner();
 		
 	}

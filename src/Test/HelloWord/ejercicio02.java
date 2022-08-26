@@ -1,5 +1,4 @@
 package Test.HelloWord;
-import java.util.Scanner;
 
 public class ejercicio02 {
 

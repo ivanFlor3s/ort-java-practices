@@ -50,6 +50,10 @@ public class MyHelper {
 	private int getRandomNumber(int min, int max) {
 	    return (int) ((Math.random() * (max - min)) + min);
 	}
+	
+	public boolean esImpar(int numero) {
+		return numero % 2 == 0;
+	}
 	/* TODO Ver que le falta a mi super printAsk para parsear dinamicamente segun el tipo que entra en el buffer
 	public <T> void printAndAsk(String s, T buffer ) {
 		System.out.println(s);

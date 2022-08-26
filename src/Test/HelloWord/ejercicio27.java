@@ -13,7 +13,11 @@ public class ejercicio27 {
 		int acumMayoresImpares = 0;
 		
 		for (int i = 0; i < CANT_EDADES; i++) {
-			auxEdad = helper.printAndAskForNumber("Ingrese una edad");
+			
+			do {
+				auxEdad = helper.printAndAskForNumber("Ingrese una edad " + (i+1));
+			} while (auxEdad < 0);
+			
 			acumuladorEdades += auxEdad;
 			if(auxEdad > EDAD_MAYOR && helper.esImpar(auxEdad) ) {
 				acumMayoresImpares++;

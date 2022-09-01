@@ -40,6 +40,10 @@ public class MyHelper {
 		return  Double.parseDouble(input.nextLine());
 	}
 	
+	public void printInLine(String s) {
+		System.out.print(s);
+	}
+	
 	/**
 	 * Asesina al scanner que se creo con la clase, es decir hace el close
 	 * Ademas tiro por consola cuanto tiempo vivio (en milisegundos) y una frase a modo de pesame

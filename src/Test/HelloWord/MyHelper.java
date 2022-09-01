@@ -11,21 +11,39 @@ public class MyHelper {
 		startTime = System.currentTimeMillis();
 		input = new Scanner (System.in);
 	}
-	
+	/**
+	 * Funcion que recibe un string, para despues imprimirlo en consola con printLn
+	 * @param s
+	 */
 	public void print(String s) {
 		System.out.println(s);
 	}
 	
+	/**
+	 * Imprime en consola un mensaje, acontinuacion se espera un numero por consola
+	 * @param s
+	 * @return
+	 */
 	public int printAndAskForNumber(String s) {
 		print(s);
 		return Integer.parseInt(input.nextLine());
 	}
 	
+	/**
+	 * Imprime en consola un mensaje y acontinuacion espera una entrada por teclado
+	 * @param s Mensaje que se va a usar para pedir el dato
+	 * @param buffer 
+	 * @return
+	 */
 	public double printAndAskForDouble(String s, double buffer) {
 		print(s);
 		return  Double.parseDouble(input.nextLine());
 	}
 	
+	/**
+	 * Asesina al scanner que se creo con la clase, es decir hace el close
+	 * Ademas tiro por consola cuanto tiempo vivio (en milisegundos) y una frase a modo de pesame
+	 */
 	public void asesinarScanner() {
 		String[] pesames = {"Un minuto de silencio por el scanner",
 				"Señoras y señores el scanner... ya no esta entre nosotros",
@@ -51,6 +69,11 @@ public class MyHelper {
 	    return (int) ((Math.random() * (max - min)) + min);
 	}
 	
+	/**
+	 * Devuelve si un numero es impar o no
+	 * @param numero
+	 * @return
+	 */
 	public boolean esImpar(int numero) {
 		return numero % 2 == 0;
 	}

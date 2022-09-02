@@ -47,24 +47,20 @@ public class NuncaPierdo {
 			switch (juego) {
 				case RULETA:
 					costoJuego = 100;
-					h.print("El costo del juego es: " +Integer.toString(costoJuego));
-					puedeJugar = monto > costoJuego;
-					
 					break;
 				case BLACK_JACK:
 					costoJuego = 200;
-					h.print("El costo del juego es: " +Integer.toString(costoJuego));
-					puedeJugar = monto > costoJuego;
 					break;
 				case POCKER:
 					costoJuego = 500;
-					h.print("El costo del juego es: " +Integer.toString(costoJuego));
-					puedeJugar = monto > costoJuego;
 					break;
 				default:
 					h.print("Se le chispoteo");
 					break;
 			}
+			
+			h.print("El costo del juego es: " +Integer.toString(costoJuego));
+			puedeJugar = monto >= costoJuego;
 			
 			if(!puedeJugar) {
 				h.print("No te alcanza el dinero para este juego");
@@ -111,7 +107,7 @@ public class NuncaPierdo {
 		
 		int totalJuegos = contadorPocker + contadorRuleta + contadorBlackJack;
 		
-		h.print("El tipo jugo " + ((double)contadorPocker/totalJuegos * 100) + "% veces al pocker");
+		h.print("El + " + jugador + " jugo " + ((double)contadorPocker/totalJuegos * 100) + "% veces al pocker");
 		h.print("El tipo jugo " + ((double)contadorRuleta/totalJuegos * 100) + "% veces a la ruleta");
 		h.print("El tipo jugo " + ((double)contadorBlackJack/totalJuegos * 100) + "% veces al nego jack");
 		

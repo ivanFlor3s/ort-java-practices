@@ -30,6 +30,16 @@ public class MyHelper {
 	}
 	
 	/**
+	 * Pregunta por un string, que ingresa por consola y se devuelve
+	 * @param s
+	 * @return
+	 */
+	public String printAndAskForString(String s) {
+		print(s);
+		return input.nextLine();
+	}
+	
+	/**
 	 * Imprime en consola un mensaje y acontinuacion espera una entrada por teclado
 	 * @param s Mensaje que se va a usar para pedir el dato
 	 * @param buffer 
@@ -69,7 +79,7 @@ public class MyHelper {
 		input.close();
 	}
 	
-	private int getRandomNumber(int min, int max) {
+	public int getRandomNumber(int min, int max) {
 	    return (int) ((Math.random() * (max - min)) + min);
 	}
 	

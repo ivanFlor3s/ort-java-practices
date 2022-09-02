@@ -17,7 +17,7 @@ public class ejercicio25 {
 		}
 		
 		h.asesinarScanner();
-
+		
 	}
 
 }

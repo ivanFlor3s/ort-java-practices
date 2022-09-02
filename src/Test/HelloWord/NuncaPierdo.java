@@ -115,6 +115,8 @@ public class NuncaPierdo {
 		h.print("El tipo jugo " + ((double)contadorRuleta/totalJuegos * 100) + "% veces a la ruleta");
 		h.print("El tipo jugo " + ((double)contadorBlackJack/totalJuegos * 100) + "% veces al nego jack");
 		
+		
+		h.asesinarScanner();
 
 	}
 

@@ -60,7 +60,7 @@ for(int i = 0; i<cantColegios; i++) {
 		cantAlumnos=Integer.parseInt(input.nextLine());
 	}
 	System.out.println("ingrese la especialidad del colegio,T para tecnico y N para no tecnico");
-	especialidad = input.next().toUpperCase().charAt(0);
+	especialidad = input.nextLine().toUpperCase().charAt(0);
 	while(especialidad!='T'|| especialidad!='T') {
 		System.out.println("Error");
 		System.out.println("ingrese un valor valido(T o N)");
@@ -69,6 +69,7 @@ for(int i = 0; i<cantColegios; i++) {
 	do {
 		System.out.println("encuesta para alumnos");
 		System.out.println("ingrese su DNI");
+		//https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo
 		String aux = input.nextLine();
 		dni = Integer.parseInt(aux);
 		while(dni<0) {

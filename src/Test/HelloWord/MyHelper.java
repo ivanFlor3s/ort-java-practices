@@ -79,6 +79,10 @@ public class MyHelper {
 		input.close();
 	}
 	
+	public boolean intBetwen(int target, int from, int to) {
+		return target >= from && target <= to;
+	}
+	
 	public int getRandomNumber(int min, int max) {
 	    return (int) ((Math.random() * (max - min)) + min);
 	}

@@ -21,11 +21,11 @@ public class Sueldos {
 		String ricachon = "";
 		double topRicachon = 0;	
 		
-		String msgeAskName = "Ingrese el nombre del empleado y " + PALABRA_FIN + "para terminar el programa";
 		
-		String ingreso = h.printAndAskForString(msgeAskName);
 		
-		while (!ingreso.equals(PALABRA_FIN)) {
+		String ingreso = pedirNombre();
+		
+		while ( !ingreso.equals(PALABRA_FIN)) {
 			
 			String categoria = pedirCategoria();
 			int antiguedad = pedirAntiguedad();
@@ -50,7 +50,7 @@ public class Sueldos {
 			h.print("Al empleado " + ingreso + " le corresponde un sueldo de: $" + sueldo );
 			
 			
-			ingreso = h.printAndAskForString(msgeAskName);
+			ingreso = pedirNombre();
 		}
 		
 		h.print("cantidad de empleados total: " + cantEmpleados);
@@ -65,15 +65,26 @@ public class Sueldos {
 		
 		do {
 			categoria = h.printAndAskForString("Ingrese la categoria (Puede ser A, B o C)")	;		
-		} while ( categoria == "A" || categoria =="B" || categoria == "C" );
+		} while ( categoria.isEmpty() || !(categoria.equals("A") || categoria.equals("B") || categoria.equals("C")) );
 		
 		return categoria;
+	}
+	
+	public static String pedirNombre() {
+		String msgeAskName = "Ingrese el nombre del empleado y " + PALABRA_FIN + " para terminar el programa";
+		String nombre= "";
+		do {
+			nombre = h.printAndAskForString(msgeAskName)	;		
+		} while ( nombre.isEmpty() );
+		
+		return nombre;
 	}
 	
 	public static int pedirAntiguedad() {
 		int antiguedad; 
 		
 		do {
+			//Se podria validar que haya un input y no vacio, queda como TODO :(
 			antiguedad = h.printAndAskForNumber("Ingrese la antiguedad (1 - 50)");		
 		} while (antiguedad < 1 || antiguedad > 50 );
 		

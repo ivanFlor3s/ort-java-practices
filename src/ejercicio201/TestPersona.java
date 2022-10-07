@@ -2,7 +2,7 @@ package ejercicio201;
 
 import Test.HelloWord.MyHelper;
 
-public class Test {
+public class TestPersona {
 
 	public static void main(String[] args) {
 		
@@ -20,7 +20,7 @@ public class Test {
 		p1.ponerNombre("raul");
 		
 		h.print(p1.decirDondeVive());
-
+		
 	}
 
 }

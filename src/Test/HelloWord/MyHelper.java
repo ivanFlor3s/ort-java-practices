@@ -7,7 +7,7 @@ public class MyHelper {
 	private long startTime;
 	static Scanner input;
 	
-	MyHelper(){
+	public MyHelper(){
 		startTime = System.currentTimeMillis();
 		input = new Scanner (System.in);
 	}

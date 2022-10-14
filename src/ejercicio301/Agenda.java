@@ -49,7 +49,7 @@ public class Agenda {
 		String msge = "";
 		for (Persona persona : personas) {
 			msge += persona.toString();
-			msge += " || ";
+			msge += " \n ";
 		}
 		
 		return msge;

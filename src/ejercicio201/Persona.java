@@ -49,6 +49,6 @@ public class Persona {
 	}
 
 	public String toString() {
-		return "Persona [nombre=" + nombre + ", apellido=" + apellido + ", viveEn=" + viveEn + ", dni=" + dni + "]";
+		return "Persona [nombre=" + nombre + ", apellido=" + apellido + ", viveEn=" + this.decirDondeVive() + ", dni=" + dni + "]";
 	}
 }

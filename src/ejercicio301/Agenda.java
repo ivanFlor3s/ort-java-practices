@@ -2,6 +2,7 @@ package ejercicio301;
 
 import java.util.ArrayList;
 
+import ejercicio201.Domicilio;
 import ejercicio201.Persona;
 
 public class Agenda {
@@ -53,5 +54,32 @@ public class Agenda {
 		}
 		
 		return msge;
+	}
+	
+	public boolean modificarDomicilio(String dni, Domicilio dom) {
+		boolean success = false;
+		
+		Persona personaRef = this.buscarPersona(dni);
+		if(personaRef != null) {
+			personaRef.ponerDomicilio(dom);
+			success = true;
+		}
+		return success;
+	}
+	
+	public Persona devolverUltimo() {
+		if(this.personas.size() == 0) {
+			return null;
+		}
+		else {
+			return this.personas.get(this.personas.size()-1);
+		}
+	}
+	
+	public void eliminarTodosElementosAMano() {
+		while (this.personas.size() != 0) {
+			this.removerPersona(this.personas.get(0));
+			
+		}
 	}
 }

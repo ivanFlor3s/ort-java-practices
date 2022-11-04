@@ -1,5 +1,6 @@
 package ejercicio201;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import Test.HelloWord.MyHelper;
@@ -9,7 +10,7 @@ public class TestDados {
 	public static void main(String[] args) {
 		
 		MyHelper h = new MyHelper();
-		
+		/*
 		///DADOS ---------------------------------------
 		Dado d1 = new Dado(6);
 		Dado d2 = new Dado(6);
@@ -34,8 +35,30 @@ public class TestDados {
 			acumulador += d1.getValor() + d2.getValor();
 			
 		}
-		h.print("Promedio de 100 tiradas es: " + ((double)acumulador / 100));
+		h.print("Promedio de 100 tiradas es: " + ((double)acumulador / 100));*/
 
+		
+		ArrayList<String> numeros = new ArrayList<>();
+		numeros.add("uno");
+		numeros.add("dosss");
+		numeros.add("tress");
+		String numeroFound = null;
+		//bbuscar
+		int index = 0;
+		while (index < numeros.size() && !numeros.get(index).equals("tredss")) {
+			index++;
+			h.print("aumente index, nuevo value " + index );
+		}
+		h.print("como salio indexdel loop " + index );
+
+		if (index < numeros.size())
+			numeroFound = numeros.get(index);
+		
+		if(numeroFound == null) {
+			h.print("No se encontro");
+		} else h.print("Se encontrooo!");
+		
+		
 	}
 
 }
